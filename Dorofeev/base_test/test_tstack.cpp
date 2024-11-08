@@ -1,4 +1,3 @@
-// test_tstack.cpp
 #include "stack.h"
 #include <gtest.h>
 

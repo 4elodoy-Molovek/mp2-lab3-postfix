@@ -15,17 +15,18 @@ int main()
     getline(cin, expression);
 
     postfix.SetInfix(expression);
+    postfix.PromptForVariables();
     cout << "Арифметическое выражение: " << postfix.GetInfix() << endl;
 
     string postfixExpression = postfix.ToPostfix();
     cout << "Постфиксная форма: " << postfixExpression << endl;
 
-    try 
+    try
     {
         result = postfix.Calculate();
         cout << "Результат: " << result << endl;
     }
-    catch (const runtime_error& e) 
+    catch (const runtime_error& e)
     {
         cerr << "Ошибка: " << e.what() << endl;
     }
